@@ -88,7 +88,6 @@ We reject the null hypothesis because the P value is lower than .05. The fisher 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
 
-
 Is there a difference in years of education (EDUC) between the those who did or did not vote in 2012 (VOTE12)?
 
 ## Methods
@@ -104,6 +103,10 @@ Is there a difference in years of education (EDUC) between the those who did or 
 #### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+plot(EDUC~VOTE12,data=GSSdata)
+```
 
 #### Numerical Descriptive Results
 
