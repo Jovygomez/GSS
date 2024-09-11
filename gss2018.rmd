@@ -80,11 +80,14 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-We reject the null hypothesis because the P value is lower than .05
+We reject the null hypothesis because the P value is lower than .05. The fisher exact test shows that the odds of 2.27 would round up to 2.3 due to the p-value being lowerb than 0.05.
+
 
 #  Question 2
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
+
+
 
 Is there a difference in years of education (EDUC) between the those who did or did not vote in 2012 (VOTE12)?
 
