@@ -111,6 +111,8 @@ $H_A$ There is a difference in the years of education between those who voted an
 ```{r}
 plot(EDUC~VOTE12,data=GSSdata)
 ```
+
+
 The box plot shows people who voted in 2012 tended to have more education than those who didnt vote in 2012
 
 #### Numerical Descriptive Results
