@@ -35,7 +35,7 @@ Question: Is gun ownership independent of opinion on capital punishment ?
 
 $H_0$: gun ownership and opinion on capital
 punishment are not related 
-SH_A$: gun ownership and opinion on capital punishment are related 
+$H_A$: gun ownership and opinion on capital punishment are related 
 
 OWNGUN ~ CAPPUN both are categorical, thus is use Cat_Cat
 
@@ -203,5 +203,5 @@ Question 2 discussion and conclusion
 In conclusion People who voted in 2012 had an average of 16. years of education while people who didnt vote in 2012 average education of 13 years. 
 
 Question 3 In conclusion 
-The graph shows that there is a slight difference in the data for each group . Higher education had better scores than those who had a lower education The table reflects that 
+The graph shows that there is a slight difference in the data for each group . Higher education had better scores than those who had a lower education. Therefore we reject the null hypothesis.
 
