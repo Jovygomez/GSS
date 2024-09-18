@@ -26,18 +26,20 @@ source("GrabData.R")
 The data in the dataframe GSSdata is from the 2018 General Social Survey. The first blocks of R-code has selected down a subset of the data to just 16 variables. It has further removed unwanted factor levels in much of the data. Examine the code in the GrabData.R file to see what it is doing. Some of the variables are categorical and others are numerical. Be sure to do a variable analysis before tackling each question.  
 First question - Is opinion on the death penalty (CAPPUN) independent of gun ownership (OWNGUN)?
 
+Question: Is gun ownership independent of opinion on capital punishment?  
+
+$H_0$: gun ownership and opinion on capital punishment are not related   
+
+$H_A$: gun ownership and opinion on capital punishment are related   
+
+OWNGUN ~ CAPPUN both are categorical, thus is use Cat_Cat. 
+
+
 
 ## Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-Question: Is gun ownership independent of opinion on capital punishment ?
-
-$H_0$: gun ownership and opinion on capital punishment are not related 
-
-$H_A$: gun ownership and opinion on capital punishment are related 
-
-OWNGUN ~ CAPPUN both are categorical, thus is use Cat_Cat
 
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -80,7 +82,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-We reject the null hypothesis because the P value is lower than .05. The fisher exact test shows that the odds of 2.27 would round up to 2.3 due to the p-value being lowerb than 0.05.
+We reject the null hypothesis because the P value is lower than .05. The fisher exact test shows that the odds of 2.27 would round up to 2.3:1 due to the p-value being lowerb than 0.05.
 
 
 #  Question 2
@@ -142,7 +144,8 @@ There is a relationship between the number of years in education in those who vo
 Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
 
 $H_0$ a persons performance on Wordsum test is not independent of their schooling 
-$H_A$ A persons performance on Wordum test is independent of their schooling 
+
+$H_A$ A persons performance on Wordum test is dependent on their schooling  
 
 
 ## Methods
@@ -177,7 +180,7 @@ The box plot shows a difference in the data for each group. The more advance in 
 favstats(WORDSUM~DEGREE,data=GSSdata)
 ```
 
-The tables show that the Junior College and Bachelor almost share the same Mean. The Graduate indicates that it is much higher, and LT Highschool and High school is much lower. 
+The tables show that the Junior College and Bachelor are appromitaley the same. The Graduate indicates that it is much higher, and LT Highschool and High school is much lower. 
 
 ### Inferential Results
 
@@ -190,7 +193,13 @@ summary.aov(model1)
 
 
 We reject the null hypthesis because the p-value is lower than 0.5. 
-There is a diffrence between the average score on the wordsum test and the level of education levels. There is a diffrence in the level of education and the performance pn the performing test. 
+There is a diffrence between the average score on the wordsum testand the level of shcooling degree. 
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+There is no statistical evidence between the difference wordsum performance of LT Highschool than Highschool
 
 # Discussion and Conclusion
 
