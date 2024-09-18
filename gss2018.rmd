@@ -111,7 +111,7 @@ $H_A$ There is a difference in the years of education between those who voted an
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ```{r}
-plot(EDUC~VOTE12,data=GSSdata)
+boxplot(EDUC~VOTE12,data=GSSdata)
 ```
 
 
@@ -154,7 +154,7 @@ $H_A$ A persons performance on Wordum test is dependent on their schooling
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
 ```{r}
-plot(WORDSUM~DEGREE,data=GSSdata)
+boxplot(WORDSUM~DEGREE,data=GSSdata)
 ```
 
 The box plot shows a difference in the data for each group. The more advance in education the higher the score is and the lower the education shows a lower score 
@@ -180,7 +180,7 @@ The box plot shows a difference in the data for each group. The more advance in 
 favstats(WORDSUM~DEGREE,data=GSSdata)
 ```
 
-The tables show that the Junior College and Bachelor are appromitaley the same. The Graduate indicates that it is much higher, and LT Highschool and High school is much lower. 
+The tables show that the Junior College and Bachelor are approximately the same. The Graduate indicates that it is much higher, and LT Highschool and High school is much lower. 
 
 ### Inferential Results
 
@@ -214,3 +214,4 @@ In conclusion People who voted in 2012 had an average of 16. years of education 
 Question 3 In conclusion 
 The graph shows that there is a slight difference in the data for each group . Higher education had better scores than those who had a lower education. Therefore we reject the null hypothesis.
 
+Overall we rejected the null since the p-value was lower than 0.5 
