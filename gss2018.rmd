@@ -199,7 +199,7 @@ There is a diffrence between the average score on the wordsum testand the level 
 plot(TukeyHSD(model1))
 ```
 
-There is no statistical evidence between the difference wordsum performance of LT Highschool than Highschool
+The test shows that you are more likely to score higher if you have higher levels of education. 
 
 # Discussion and Conclusion
 
